@@ -56,6 +56,20 @@ namespace CSharpTutorials
                 Console.WriteLine("Exception rethrown");
             }
 
+            /*
+            Called Method1
+            1
+            Called Method2
+            My exception
+            0
+            Called Method3
+            Called Method4
+            Called Method2
+            My exception
+            Exception rethrown
+
+            */
+
         }
     }
 }
