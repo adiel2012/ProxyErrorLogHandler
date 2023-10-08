@@ -24,10 +24,6 @@ class A : Interface1{
     public void Method3(){}
     public void Method4(){}
 }
-class M<T>
-{
-
-}
 
 namespace CSharpTutorials
 {
@@ -35,31 +31,8 @@ namespace CSharpTutorials
     {
         static void Main(string[] args)
         {
-            //var mm = new TResult<int>(2);
-            //int gg = mm;
 
             A a = new A();
-
-            //Type theType = Type.GetType("core.TResult`1");
-            var fffff = typeof(TResult<>);
-
-            
-
-            object v1 = 9;
-
-
-            Type typeArgument = v1.GetType();
-            Type template = typeof(core.TResult<>);
-            Type t4 = Type.GetType(fffff.FullName);
-            Type genericType = template.MakeGenericType(typeArgument);
-            var instance = Activator.CreateInstance(genericType, 2);
-
-            int tyrttry = (core.TResult<int>)instance;
-
-            //int hhh = fffff.
-
-            int mm = (int)instance;
-
 
             var proxy = core.ProxyErrorHandler<Interface1>.CreateProxy(a);
             Interface1 p = proxy as Interface1;
